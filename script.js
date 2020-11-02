@@ -208,6 +208,9 @@ function createBookCard(book) {
     deleteDiv.appendChild(deleteButton);
     headingDiv.appendChild(deleteDiv);
     bookCard.appendChild(headingDiv);
+    deleteButton.addEventListener('click', function() {
+        cardsDiv.removeChild(bookCard);
+    })
     let bookAuthor = document.createElement('p');
     bookAuthor.setAttribute('class', 'book-author');
     bookAuthor.textContent = `Author: ${book.author}`;
@@ -220,6 +223,13 @@ function createBookCard(book) {
     bookRead.setAttribute('class', 'book-read');
     bookRead.textContent = `Finished: ${book.readStatus}`;
     bookCard.appendChild(bookRead);
+    let changeStatusDiv = document.createElement('div');
+    changeStatusDiv.setAttribute('class', 'change-status-div');
+    let changeStatusButton = document.createElement('button');
+    changeStatusButton.setAttribute('class', 'change-status-button');
+    changeStatusButton.textContent = "Change Status";
+    changeStatusDiv.appendChild(changeStatusButton);
+    bookCard.appendChild(changeStatusDiv);
     cardsDiv.appendChild(bookCard);
 }
 
