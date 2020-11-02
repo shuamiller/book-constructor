@@ -25,12 +25,16 @@ h1 {
 }
 
 #cards-div {
-    margin: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 1em;
     padding: 2em;
     background-color: rgb(252, 238, 221);
 }
 
 .book-card {
+    margin: 1em;
     padding: 1em;
     background-color: rgb(85, 73, 56);
     width: 20em;
@@ -39,6 +43,7 @@ h1 {
 
 h2 {
     color: rgb(230, 214, 162);
+    font-size: 1.3em;
     margin: 0 0 .5em;
 }
 
@@ -50,6 +55,7 @@ h2 {
 .delete-div {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .fa-trash-alt {
