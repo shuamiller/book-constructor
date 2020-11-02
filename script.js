@@ -20,7 +20,28 @@ let theSicknessUntoDeath = {
     readStatus: "Yes"
 }
 
-let myLibrary = [theSicknessUntoDeath];
+let harryPotter = {
+    title: "Harry Potter",
+    author: "J.K. Rowling",
+    pages: 230,
+    readStatus: "Yes"
+}
+
+let myst = {
+    title: "Myst",
+    author: "Rand Miller",
+    pages: 300,
+    readStatus: "No"
+}
+
+let theGeniusOfBirds = {
+    title: "The Genius of Birds",
+    author: "Jennifer Ackerman",
+    pages: 340,
+    readStatus: "No"
+}
+
+let myLibrary = [theSicknessUntoDeath, harryPotter, myst, theGeniusOfBirds];
 
 function Book(title, author, pages, readStatus) {
     this.title = title
@@ -230,6 +251,14 @@ function createBookCard(book) {
     changeStatusButton.textContent = "Change Status";
     changeStatusDiv.appendChild(changeStatusButton);
     bookCard.appendChild(changeStatusDiv);
+    changeStatusButton.addEventListener('click', function() {
+        console.log(book.readStatus);
+        if (bookRead.textContent == `Finished: No`) {
+            bookRead.textContent = `Finished: Yes`;
+        } else if (bookRead.textContent == `Finished: Yes`) {
+            bookRead.textContent = `Finished: No`;
+        }
+    });
     cardsDiv.appendChild(bookCard);
 }
 
