@@ -34,6 +34,7 @@ h1 {
     padding: 1em;
     background-color: rgb(85, 73, 56);
     width: 20em;
+    border-radius: .5em;
 }
 
 h2 {
@@ -44,6 +45,10 @@ h2 {
 .heading-div {
     display: flex;
     justify-content: space-between;
+}
+
+.delete-div {
+    display: flex;
 }
 
 .fa-trash-alt {
